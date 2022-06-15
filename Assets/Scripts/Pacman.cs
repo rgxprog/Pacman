@@ -73,13 +73,13 @@ public class Pacman : MonoBehaviour
     // Verificar que jugador mueve a Pacman
     private void CheckControl()
     {
-        if (Input.GetAxis("Horizontal") > 0)
+        if (Input.GetKeyDown(KeyCode.RightArrow))
             movement.SetDirection(Vector2.right);
-        else if (Input.GetAxis("Horizontal") < 0)
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
             movement.SetDirection(Vector2.left);
-        else if (Input.GetAxis("Vertical") > 0)
+        if (Input.GetKeyDown(KeyCode.UpArrow))
             movement.SetDirection(Vector2.up);
-        else if (Input.GetAxis("Vertical") < 0)
+        if (Input.GetKeyDown(KeyCode.DownArrow))
             movement.SetDirection(Vector2.down);
     }
 
